@@ -9,23 +9,15 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge"
 import Sidebar from "@/components/sidebar"
 import { Search, AlertTriangle, AlertCircle, CheckCircle } from "lucide-react"
+import { getAvailableCourses, type Course } from "@/lib/services/courses"
 
-// Mock courses data
-const mockCourses = [
-  { cod: "CS2H1", name: "INTERACCION HUMANO COMPUTADOR", credits: 3, level: "Avanzado", risk: "low", riskScore: 0.25 },
-  { cod: "CS2H2", name: "INGENIERIA DE SOFTWARE", credits: 4, level: "Avanzado", risk: "medium", riskScore: 0.55 },
-  { cod: "CS2H3", name: "BASES DE DATOS", credits: 3, level: "Intermedio", risk: "high", riskScore: 0.78 },
-  { cod: "CS2H4", name: "ALGORITMOS AVANZADOS", credits: 4, level: "Avanzado", risk: "medium", riskScore: 0.62 },
-  { cod: "CS2H5", name: "SISTEMAS OPERATIVOS", credits: 3, level: "Intermedio", risk: "low", riskScore: 0.35 },
-]
-
-function RiskBadge({ risk }: { risk: string }) {
+function RiskBadge({ risk }: { risk: "low" | "medium" | "high" }) {
   const config = {
     low: { bg: "bg-risk-low/10", text: "text-risk-low", label: "Bajo", icon: CheckCircle },
     medium: { bg: "bg-risk-medium/10", text: "text-risk-medium", label: "Medio", icon: AlertCircle },
     high: { bg: "bg-risk-high/10", text: "text-risk-high", label: "Alto", icon: AlertTriangle },
-  }
-  const c = config[risk as keyof typeof config]
+  } as const
+  const c = config[risk]
   const Icon = c.icon
   return (
     <Badge className={`${c.bg} ${c.text} border-0`}>
@@ -39,18 +31,25 @@ export default function CoursesPage() {
   const router = useRouter()
   const [searchTerm, setSearchTerm] = useState("")
   const [filterLevel, setFilterLevel] = useState("all")
-  const [courses, setCourses] = useState(mockCourses)
+  const [courses, setCourses] = useState<Course[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     const user = localStorage.getItem("user")
     if (!user) router.push("/login")
+    getAvailableCourses(1)
+      .then((data) => setCourses(data))
+      .catch((e) => setError(e?.message ?? "Error al cargar cursos"))
+      .finally(() => setLoading(false))
   }, [router])
 
   const filtered = courses.filter((course) => {
     const matchesSearch =
-      course.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      course.cod.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesLevel = filterLevel === "all" || course.level === filterLevel
+      course.nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      course.cod_curso.toLowerCase().includes(searchTerm.toLowerCase())
+    const level = course.semestre && course.semestre <= 4 ? "Básico" : course.semestre && course.semestre <= 8 ? "Intermedio" : "Avanzado"
+    const matchesLevel = filterLevel === "all" || level === filterLevel
     return matchesSearch && matchesLevel
   })
 
@@ -63,6 +62,9 @@ export default function CoursesPage() {
             <h1 className="text-3xl font-bold mb-2">Cursos Disponibles</h1>
             <p className="text-muted-foreground">Selecciona un curso para ver predicciones detalladas</p>
           </div>
+
+          {loading && <p className="text-sm text-muted-foreground">Cargando cursos...</p>}
+          {error && <p className="text-sm text-destructive">{error}</p>}
 
           <div className="flex gap-4 mb-6">
             <div className="flex-1 relative">
@@ -88,29 +90,27 @@ export default function CoursesPage() {
           </div>
 
           <div className="grid gap-4">
-            {filtered.map((course) => (
+            {!loading && filtered.map((course) => (
               <Card
-                key={course.cod}
+                key={course.cod_curso}
                 className="hover:shadow-lg transition-shadow cursor-pointer"
-                onClick={() => router.push(`/courses/${course.cod}`)}
+                onClick={() => router.push(`/courses/${course.cod_curso}`)}
               >
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
-                        <span className="font-mono text-sm font-semibold text-primary">{course.cod}</span>
-                        <Badge variant="outline">{course.credits} créditos</Badge>
-                        <Badge variant="secondary">{course.level}</Badge>
+                        <span className="font-mono text-sm font-semibold text-primary">{course.cod_curso}</span>
+                        <Badge variant="outline">{course.creditos ?? 0} créditos</Badge>
+                        <Badge variant="secondary">{course.semestre ? `Sem ${course.semestre}` : ""}</Badge>
                       </div>
-                      <h3 className="font-semibold text-lg mb-1">{course.name}</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Riesgo de desaprobación: {(course.riskScore * 100).toFixed(0)}%
-                      </p>
+                      <h3 className="font-semibold text-lg mb-1">{course.nombre}</h3>
+                      <p className="text-sm text-muted-foreground">Prerequisitos: {(course.prerequisitos?.length ?? 0)}</p>
                     </div>
                     <div className="flex flex-col items-end gap-3">
-                      <RiskBadge risk={course.risk} />
+                      <RiskBadge risk={"low"} />
                       <Button size="sm" variant="outline">
-                        Ver detalles →
+                        Ver detalles »
                       </Button>
                     </div>
                   </div>
@@ -123,3 +123,4 @@ export default function CoursesPage() {
     </div>
   )
 }
+

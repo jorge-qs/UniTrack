@@ -20,11 +20,15 @@ Thumbs.db
 .vscode/
 
 # Datos/Modelos pesados
-data/
-*.csv
-*.parquet
-*.pkl
+# IMPORTANTE: Los modelos .pkl están en Git LFS
+# Los CSV de malla curricular SÍ se incluyen (son pequeños)
+data/*.parquet
 *.joblib
 *.npy
 *.pt
 *.h5
+
+# Base de datos SQLite (no commitear)
+*.db
+*.db-shm
+*.db-wal

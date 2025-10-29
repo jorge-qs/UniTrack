@@ -7,30 +7,61 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import Sidebar from "@/components/sidebar"
 import { Trash2 } from "lucide-react"
-
-const mockCourses = [
-  { cod: "CS2H1", name: "INTERACCION HUMANO COMPUTADOR", credits: 3, risk: "low", riskScore: 0.25 },
-  { cod: "CS2H2", name: "INGENIERIA DE SOFTWARE", credits: 4, risk: "medium", riskScore: 0.55 },
-]
+import { getAvailableCourses, type Course } from "@/lib/services/courses"
+import { getHistory, type HistoryResponse } from "@/lib/services/predictions"
 
 export default function PlanPage() {
   const router = useRouter()
   const [draftList, setDraftList] = useState<string[]>([])
-  const [courses, setCourses] = useState(mockCourses)
+  const [courses, setCourses] = useState<Course[]>([])
+  const [lastScoreByCourse, setLastScoreByCourse] = useState<Record<string, number>>({})
 
   useEffect(() => {
     const user = localStorage.getItem("user")
     if (!user) router.push("/login")
     const draft = localStorage.getItem("draftList")
     if (draft) setDraftList(JSON.parse(draft))
+
+    // Load real courses
+    getAvailableCourses(2)
+      .then((data) => setCourses(data))
+      .catch(() => setCourses([]))
+
+    // Load last scores from history
+    getHistory(100, 0)
+      .then((h: HistoryResponse) => {
+        const map: Record<string, number> = {}
+        for (const item of h.items) {
+          if (!(item.cod_curso in map)) map[item.cod_curso] = item.score
+        }
+        setLastScoreByCourse(map)
+      })
+      .catch(() => setLastScoreByCourse({}))
+
+    // Keep draft in sync
+    const onVis = () => {
+      const s = localStorage.getItem("draftList")
+      if (s) setDraftList(JSON.parse(s))
+    }
+    const onStorage = (e: StorageEvent) => {
+      if (e.key === "draftList") setDraftList(e.newValue ? JSON.parse(e.newValue) : [])
+    }
+    document.addEventListener("visibilitychange", onVis)
+    window.addEventListener("storage", onStorage)
+    return () => {
+      document.removeEventListener("visibilitychange", onVis)
+      window.removeEventListener("storage", onStorage)
+    }
   }, [router])
 
-  const draftCourses = courses.filter((c) => draftList.includes(c.cod))
-  const totalCredits = draftCourses.reduce((sum, c) => sum + c.credits, 0)
-  const avgRisk =
-    draftCourses.length > 0
-      ? ((draftCourses.reduce((sum, c) => sum + c.riskScore, 0) / draftCourses.length) * 100).toFixed(0)
-      : 0
+  const draftCourses = courses.filter((c) => draftList.includes(c.cod_curso))
+  const totalCredits = draftCourses.reduce((sum, c) => sum + (c.creditos ?? 0), 0)
+  const avgRisk = draftCourses.length > 0
+    ? (
+        (draftCourses.reduce((sum, c) => sum + (lastScoreByCourse[c.cod_curso] ?? 0), 0) / draftCourses.length) *
+        100
+      ).toFixed(0)
+    : 0
 
   const handleRemove = (cod: string) => {
     const newDraft = draftList.filter((c) => c !== cod)
@@ -90,18 +121,17 @@ export default function PlanPage() {
                 <div className="space-y-3">
                   {draftCourses.map((course) => (
                     <div
-                      key={course.cod}
+                      key={course.cod_curso}
                       className="flex items-center justify-between p-4 border rounded-lg hover:bg-secondary transition-colors"
                     >
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
-                          <span className="font-mono text-sm font-semibold text-primary">{course.cod}</span>
-                          <Badge variant="outline">{course.credits} créditos</Badge>
+                          <span className="font-mono text-sm font-semibold text-primary">{course.cod_curso}</span>
+                          <Badge variant="outline">{course.creditos ?? 0} créditos</Badge>
                         </div>
-                        <p className="text-sm font-medium">{course.name}</p>
-                        <p className="text-xs text-muted-foreground">Riesgo: {(course.riskScore * 100).toFixed(0)}%</p>
+                        <p className="text-sm font-medium">{course.nombre}</p>
                       </div>
-                      <Button variant="ghost" size="sm" onClick={() => handleRemove(course.cod)}>
+                      <Button variant="ghost" size="sm" onClick={() => handleRemove(course.cod_curso)}>
                         <Trash2 className="w-4 h-4" />
                       </Button>
                     </div>

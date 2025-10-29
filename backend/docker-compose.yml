@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: unitrack
+      POSTGRES_PASSWORD: unitrack
+      POSTGRES_DB: unitrack
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  api:
+    build: .
+    environment:
+      DATABASE_URL: postgresql+psycopg2://unitrack:unitrack@db:5432/unitrack
+      APP_ENV: dev
+      AUTH_MODE: mock
+      FRONTEND_ORIGIN: http://localhost:3000
+      MODEL_PATH: ../ml_models/models/model.pkl
+      MODEL_VERSION: v1
+    ports:
+      - "8000:8080"
+    depends_on:
+      - db
+volumes:
+  pgdata:

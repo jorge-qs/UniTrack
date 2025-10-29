@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Progress } from "@/components/ui/progress"
+import { profileService } from "@/lib/services/profile"
 
 export default function OnboardingPage() {
   const router = useRouter()
@@ -28,8 +29,25 @@ export default function OnboardingPage() {
     if (step < 3) {
       setStep(step + 1)
     } else {
-      localStorage.setItem("profile", JSON.stringify(formData))
-      router.push("/dashboard")
+      // Map onboarding fields to StudentProfileData and save to backend
+      const toProfile = {
+        sexo: (formData.gender as "M" | "F") || "M",
+        fecha_nacimiento: formData.birthDate || "2000-01-01",
+        estado_civil: "Soltero",
+        tipo_colegio: formData.collegeType === "private" ? "Privado" : "Publico",
+        promedio_general: 14.0,
+        creditos_aprobados: 0,
+        puntaje_ingreso: Number(formData.admissionScore || 0),
+        semestres_cursados: 0,
+        tiene_beca: formData.scholarshipStatus === "1",
+        cantidad_reservas: 0,
+        familia: "CS",
+        periodo_ingreso: "2024-1",
+      }
+      profileService
+        .saveProfile(toProfile)
+        .then(() => router.push("/dashboard"))
+        .catch(() => router.push("/dashboard"))
     }
   }
 

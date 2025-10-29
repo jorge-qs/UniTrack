@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { AlertCircle } from "lucide-react"
+import { register as registerUser } from "@/lib/services/auth"
 
 export default function RegisterPage() {
   const router = useRouter()
@@ -38,14 +39,18 @@ export default function RegisterPage() {
         return
       }
 
-      if (formData.email && formData.password && formData.fullName) {
-        localStorage.setItem("user", JSON.stringify({ email: formData.email, fullName: formData.fullName }))
-        router.push("/onboarding")
-      } else {
+      if (!formData.email || !formData.password || !formData.fullName) {
         setError("Por favor completa todos los campos")
+        return
       }
+
+      // Call backend register endpoint
+      await registerUser(formData.email, formData.password, formData.fullName)
+
+      // Go to onboarding or dashboard
+      router.push("/onboarding")
     } catch (err) {
-      setError("Error al crear la cuenta")
+      setError(err instanceof Error ? err.message : "Error al crear la cuenta")
     } finally {
       setLoading(false)
     }

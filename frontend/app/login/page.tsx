@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { AlertCircle } from "lucide-react"
+import { login } from "@/lib/services/auth"
 
 export default function LoginPage() {
   const router = useRouter()
@@ -22,16 +23,19 @@ export default function LoginPage() {
     setLoading(true)
 
     try {
-      // Mock authentication - in production, use Supabase
-      if (email && password) {
-        // Store user session
-        localStorage.setItem("user", JSON.stringify({ email }))
-        router.push("/dashboard")
-      } else {
+      if (!email || !password) {
         setError("Por favor completa todos los campos")
+        setLoading(false)
+        return
       }
+
+      // Call the auth service to login
+      await login(email, password)
+
+      // Redirect to dashboard on success
+      router.push("/dashboard")
     } catch (err) {
-      setError("Error al iniciar sesión")
+      setError(err instanceof Error ? err.message : "Error al iniciar sesión")
     } finally {
       setLoading(false)
     }
