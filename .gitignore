@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Node / Frontend
+node_modules/
+dist/
+build/
+.next/
+out/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Datos/Modelos pesados
+data/
+*.csv
+*.parquet
+*.pkl
+*.joblib
+*.npy
+*.pt
+*.h5
