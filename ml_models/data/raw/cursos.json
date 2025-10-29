@@ -1,0 +1,357 @@
+[
+  {
+    "CODIGO": "CS111",
+    "CURSO": "Programación de Video Juegos",
+    "DESCRIPCION": ["programming", "game development", "algorithms", "logic", "variables", "conditionals", "loops", "functions", "arrays", "object oriented", "graphics", "animation", "user input", "collision detection", "game physics", "artificial intelligence", "debugging", "testing", "optimization", "performance"]
+  },
+  {
+    "CODIGO": "CS1D1",
+    "CURSO": "Estructuras Discretas I",
+    "DESCRIPCION": ["mathematics", "logic", "sets", "relations", "functions", "proof techniques", "induction", "recursion", "combinatorics", "counting", "graphs", "trees", "algorithms", "complexity", "discrete structures", "boolean algebra", "number theory", "sequences", "summation", "probability"]
+  },
+  {
+    "CODIGO": "FG101",
+    "CURSO": "Comunicación",
+    "DESCRIPCION": ["communication", "writing", "reading", "speaking", "listening", "rhetoric", "argumentation", "persuasion", "presentation", "audience", "message", "feedback", "nonverbal", "interpersonal", "professional", "academic", "reports", "emails", "meetings", "negotiation"]
+  },
+  {
+    "CODIGO": "FG102",
+    "CURSO": "Metodología del Estudio",
+    "DESCRIPCION": ["study techniques", "learning methods", "time management", "organization", "note taking", "reading comprehension", "memory", "concentration", "research", "academic planning", "goal setting", "motivation", "self assessment", "critical thinking", "problem solving", "information processing", "study habits", "exam preparation", "active learning", "metacognition"]
+  },
+  {
+    "CODIGO": "FG103",
+    "CURSO": "Introducción a la Vida Universitaria",
+    "DESCRIPCION": ["university life", "academic adaptation", "campus resources", "student services", "time management", "career planning", "academic integrity", "research skills", "library resources", "digital tools", "collaboration", "teamwork", "leadership", "personal development", "critical thinking", "communication", "professional ethics", "social responsibility", "cultural diversity", "community engagement"]
+  },
+  {
+    "CODIGO": "MA100",
+    "CURSO": "Matemática I",
+    "DESCRIPCION": ["algebra", "functions", "equations", "inequalities", "polynomials", "rational expressions", "exponents", "logarithms", "trigonometry", "geometry", "analytic geometry", "vectors", "matrices", "determinants", "systems equations", "complex numbers", "sequences", "series", "limits", "derivatives"]
+  },
+  {
+    "CODIGO": "CS100",
+    "CURSO": "Introducción de Ciencia de la Computación",
+    "DESCRIPCION": ["computer science", "algorithms", "programming", "data structures", "computational thinking", "problem solving", "abstraction", "decomposition", "pattern recognition", "automation", "computer systems", "hardware", "software", "operating systems", "networks", "databases", "artificial intelligence", "cybersecurity", "web development", "mobile applications"]
+  },
+  {
+    "CODIGO": "CS112",
+    "CURSO": "Ciencia de la Computación I",
+    "DESCRIPCION": ["programming fundamentals", "algorithms", "data types", "control structures", "functions", "arrays", "strings", "pointers", "memory management", "file handling", "debugging", "testing", "object oriented", "classes", "objects", "inheritance", "polymorphism", "encapsulation", "abstraction", "modularity"]
+  },
+  {
+    "CODIGO": "CS1D2",
+    "CURSO": "Estructuras Discretas II",
+    "DESCRIPCION": ["graph theory", "trees", "networks", "combinatorics", "probability", "statistics", "recurrence relations", "generating functions", "inclusion exclusion", "pigeonhole principle", "graph algorithms", "shortest path", "minimum spanning", "matching", "coloring", "planarity", "directed graphs", "connectivity", "flows", "optimization"]
+  },
+  {
+    "CODIGO": "FG104",
+    "CURSO": "Introducción a la Filosofía",
+    "DESCRIPCION": ["philosophy", "epistemology", "metaphysics", "ethics", "logic", "reasoning", "argumentation", "critical thinking", "knowledge", "reality", "existence", "consciousness", "morality", "aesthetics", "political philosophy", "language", "mind", "science", "technology", "human nature"]
+  },
+  {
+    "CODIGO": "FG105",
+    "CURSO": "Apreciación Musical",
+    "DESCRIPCION": ["music appreciation", "music theory", "rhythm", "melody", "harmony", "composition", "orchestration", "musical forms", "genres", "periods", "instruments", "voice", "conducting", "listening skills", "analysis", "criticism", "cultural context", "historical development", "performance", "creativity"]
+  },
+  {
+    "CODIGO": "FG111",
+    "CURSO": "Persona, Matrimonio y Familia",
+    "DESCRIPCION": ["personhood", "marriage", "family", "relationships", "communication", "conflict resolution", "parenting", "child development", "family systems", "cultural diversity", "social context", "psychological aspects", "emotional intelligence", "values", "ethics", "responsibility", "commitment", "intimacy", "gender", "generations"]
+  },
+  {
+    "CODIGO": "MA101",
+    "CURSO": "Matemática II",
+    "DESCRIPCION": ["calculus", "differentiation", "integration", "limits", "continuity", "derivatives", "applications", "optimization", "related rates", "integration techniques", "fundamental theorem", "areas", "volumes", "transcendental functions", "parametric equations", "polar coordinates", "sequences", "series", "convergence", "taylor series"]
+  },
+  {
+    "CODIGO": "CS113",
+    "CURSO": "Ciencia de la Computación II",
+    "DESCRIPCION": ["advanced programming", "data structures", "algorithms", "complexity analysis", "recursion", "sorting", "searching", "linked lists", "stacks", "queues", "trees", "graphs", "hashing", "dynamic programming", "greedy algorithms", "divide conquer", "backtracking", "object oriented design", "design patterns", "software engineering"]
+  },
+  {
+    "CODIGO": "CS1D3",
+    "CURSO": "Álgebra Abstracta",
+    "DESCRIPCION": ["abstract algebra", "groups", "rings", "fields", "modules", "vector spaces", "linear transformations", "homomorphisms", "isomorphisms", "subgroups", "normal subgroups", "quotient groups", "polynomial rings", "field extensions", "galois theory", "symmetric groups", "cyclic groups", "abelian groups", "ideals", "factorization"]
+  },
+  {
+    "CODIGO": "CS221",
+    "CURSO": "Arquitectura de Computadores",
+    "DESCRIPCION": ["computer architecture", "processors", "memory", "storage", "input output", "instruction sets", "assembly language", "pipelining", "cache", "virtual memory", "parallel processing", "multicore", "performance", "benchmarking", "microarchitecture", "bus systems", "interrupts", "dma", "risc", "cisc"]
+  },
+  {
+    "CODIGO": "CS231",
+    "CURSO": "Desarrollo Basado en Plataformas",
+    "DESCRIPCION": ["platform development", "web applications", "mobile apps", "desktop software", "frameworks", "apis", "sdk", "development tools", "user interface", "user experience", "cross platform", "native development", "hybrid apps", "responsive design", "progressive web", "deployment", "distribution", "app stores", "version control", "continuous integration"]
+  },
+  {
+    "CODIGO": "FG107",
+    "CURSO": "Antropología Filosófica y Teológica",
+    "DESCRIPCION": ["philosophical anthropology", "theological anthropology", "human nature", "personhood", "consciousness", "free will", "morality", "spirituality", "transcendence", "meaning", "purpose", "dignity", "rights", "responsibilities", "community", "culture", "history", "tradition", "reason", "faith"]
+  },
+  {
+    "CODIGO": "FG201",
+    "CURSO": "Apreciación Artística",
+    "DESCRIPCION": ["art appreciation", "visual arts", "painting", "sculpture", "architecture", "design", "composition", "color theory", "perspective", "materials", "techniques", "styles", "movements", "historical context", "cultural significance", "criticism", "analysis", "interpretation", "creativity", "expression"]
+  },
+  {
+    "CODIGO": "FG202",
+    "CURSO": "Apreciación Literaria",
+    "DESCRIPCION": ["literary appreciation", "reading", "analysis", "interpretation", "genres", "narrative", "poetry", "drama", "fiction", "nonfiction", "characters", "plot", "setting", "theme", "symbolism", "metaphor", "style", "rhetoric", "critical theory", "cultural context"]
+  },
+  {
+    "CODIGO": "MA102",
+    "CURSO": "Cálculo I",
+    "DESCRIPCION": ["differential calculus", "limits", "continuity", "derivatives", "differentiation rules", "chain rule", "implicit differentiation", "related rates", "optimization", "curve sketching", "mean value theorem", "lhopital rule", "antiderivatives", "integration", "riemann sums", "definite integrals", "fundamental theorem", "applications", "physics", "engineering"]
+  },
+  {
+    "CODIGO": "CS210",
+    "CURSO": "Algoritmos y Estructuras de Datos",
+    "DESCRIPCION": ["algorithms", "data structures", "complexity analysis", "asymptotic notation", "sorting algorithms", "searching algorithms", "hash tables", "heaps", "priority queues", "binary search trees", "balanced trees", "graph algorithms", "shortest path", "minimum spanning", "dynamic programming", "greedy algorithms", "divide conquer", "backtracking", "recursion", "optimization"]
+  },
+  {
+    "CODIGO": "CS211",
+    "CURSO": "Teoría de la Computación",
+    "DESCRIPCION": ["computation theory", "automata", "finite state", "pushdown automata", "turing machines", "computability", "decidability", "complexity theory", "p np", "reduction", "completeness", "regular languages", "context free", "recursive languages", "church turing", "halting problem", "undecidability", "formal languages", "grammars", "parsing"]
+  },
+  {
+    "CODIGO": "CS271",
+    "CURSO": "Bases de Datos I",
+    "DESCRIPCION": ["databases", "relational model", "sql", "normalization", "entity relationship", "data modeling", "queries", "transactions", "concurrency", "indexing", "integrity", "constraints", "database design", "schema", "tables", "views", "stored procedures", "triggers", "acid properties", "recovery"]
+  },
+  {
+    "CODIGO": "FG204",
+    "CURSO": "Teología",
+    "DESCRIPCION": ["theology", "religious studies", "doctrine", "scripture", "tradition", "faith", "reason", "revelation", "god", "christology", "pneumatology", "ecclesiology", "sacraments", "morality", "spirituality", "prayer", "worship", "community", "service", "justice"]
+  },
+  {
+    "CODIGO": "MA201",
+    "CURSO": "Cálculo II",
+    "DESCRIPCION": ["integral calculus", "integration techniques", "substitution", "integration parts", "partial fractions", "improper integrals", "applications integration", "areas volumes", "arc length", "surface area", "work", "center mass", "pressure", "fluid force", "sequences", "series", "convergence tests", "power series", "taylor series", "fourier series"]
+  },
+  {
+    "CODIGO": "MA203",
+    "CURSO": "Estadística y Probabilidades",
+    "DESCRIPCION": ["statistics", "probability", "descriptive statistics", "inferential statistics", "probability distributions", "random variables", "expectation", "variance", "covariance", "correlation", "sampling", "estimation", "hypothesis testing", "regression", "anova", "bayesian statistics", "statistical inference", "data analysis", "confidence intervals", "significance tests"]
+  },
+  {
+    "CODIGO": "CB111",
+    "CURSO": "Física Computacional",
+    "DESCRIPCION": ["computational physics", "numerical methods", "simulation", "modeling", "differential equations", "integration", "differentiation", "monte carlo", "molecular dynamics", "finite difference", "finite element", "wave equations", "heat equations", "electromagnetism", "mechanics", "quantum mechanics", "statistical physics", "visualization", "data analysis", "algorithm implementation"]
+  },
+  {
+    "CODIGO": "CS212",
+    "CURSO": "Análisis y Diseño de Algoritmos",
+    "DESCRIPCION": ["algorithm analysis", "algorithm design", "complexity theory", "asymptotic analysis", "recurrence relations", "divide conquer", "dynamic programming", "greedy algorithms", "backtracking", "branch bound", "randomized algorithms", "approximation algorithms", "online algorithms", "parallel algorithms", "distributed algorithms", "network algorithms", "geometric algorithms", "string algorithms", "optimization", "heuristics"]
+  },
+  {
+    "CODIGO": "CS272",
+    "CURSO": "Bases de Datos II",
+    "DESCRIPCION": ["advanced databases", "distributed databases", "parallel databases", "object oriented databases", "nosql", "big data", "data warehousing", "data mining", "olap", "oltp", "query optimization", "transaction processing", "concurrency control", "recovery systems", "security", "privacy", "data integrity", "backup", "replication", "sharding"]
+  },
+  {
+    "CODIGO": "CS291",
+    "CURSO": "Ingeniería de Software I",
+    "DESCRIPCION": ["software engineering", "requirements analysis", "specification", "design", "implementation", "testing", "maintenance", "software lifecycle", "methodologies", "agile", "waterfall", "iterative", "version control", "documentation", "quality assurance", "project management", "team collaboration", "code review", "debugging", "deployment"]
+  },
+  {
+    "CODIGO": "FG106",
+    "CURSO": "Teatro",
+    "DESCRIPCION": ["theater", "drama", "acting", "directing", "stagecraft", "set design", "lighting", "sound", "costumes", "makeup", "script analysis", "character development", "improvisation", "voice", "movement", "rehearsal", "performance", "audience", "criticism", "production"]
+  },
+  {
+    "CODIGO": "FG210",
+    "CURSO": "Moral",
+    "DESCRIPCION": ["moral philosophy", "ethics", "values", "principles", "decision making", "responsibility", "justice", "rights", "duties", "virtue", "consequences", "intentions", "character", "community", "culture", "tradition", "authority", "freedom", "autonomy", "conscience"]
+  },
+  {
+    "CODIGO": "MA306",
+    "CURSO": "Análisis Numérico",
+    "DESCRIPCION": ["numerical analysis", "approximation", "error analysis", "interpolation", "extrapolation", "numerical integration", "numerical differentiation", "linear equations", "nonlinear equations", "optimization", "differential equations", "finite differences", "iterative methods", "convergence", "stability", "accuracy", "precision", "algorithms", "implementation", "scientific computing"]
+  },
+  {
+    "CODIGO": "CS292",
+    "CURSO": "Ingeniería de Software II",
+    "DESCRIPCION": ["advanced software engineering", "software architecture", "design patterns", "refactoring", "testing strategies", "unit testing", "integration testing", "system testing", "acceptance testing", "continuous integration", "continuous deployment", "devops", "microservices", "cloud computing", "security", "performance", "scalability", "reliability", "maintainability", "documentation"]
+  },
+  {
+    "CODIGO": "CS251",
+    "CURSO": "Sistemas Operativos",
+    "DESCRIPCION": ["operating systems", "process management", "threads", "synchronization", "deadlocks", "memory management", "virtual memory", "file systems", "storage", "input output", "device drivers", "scheduling", "multiprogramming", "multitasking", "security", "protection", "networking", "distributed systems", "real time", "embedded systems"]
+  },
+  {
+    "CODIGO": "CS311",
+    "CURSO": "Programación Competitiva",
+    "DESCRIPCION": ["competitive programming", "algorithms", "data structures", "problem solving", "optimization", "time complexity", "space complexity", "mathematical reasoning", "combinatorics", "graph theory", "dynamic programming", "greedy algorithms", "divide conquer", "backtracking", "implementation", "testing", "debugging", "contests", "online judges", "team collaboration"]
+  },
+  {
+    "CODIGO": "CS312",
+    "CURSO": "Estructuras de Datos Avanzadas",
+    "DESCRIPCION": ["advanced data structures", "balanced trees", "b trees", "red black trees", "avl trees", "splay trees", "skip lists", "fibonacci heaps", "van emde boas", "segment trees", "fenwick trees", "suffix arrays", "suffix trees", "tries", "kd trees", "quadtrees", "octrees", "persistent data", "cache oblivious", "external memory"]
+  },
+  {
+    "CODIGO": "FG203",
+    "CURSO": "Oratoria",
+    "DESCRIPCION": ["public speaking", "rhetoric", "persuasion", "argumentation", "delivery", "voice projection", "body language", "eye contact", "audience analysis", "message structuring", "opening", "closing", "transitions", "visual aids", "impromptu speaking", "prepared speeches", "debate", "presentation skills", "confidence", "feedback"]
+  },
+  {
+    "CODIGO": "MA307",
+    "CURSO": "Matemática aplicada a la Computación",
+    "DESCRIPCION": ["applied mathematics", "computational mathematics", "linear algebra", "matrix theory", "eigenvalues", "eigenvectors", "numerical linear", "optimization", "linear programming", "nonlinear programming", "calculus variations", "fourier analysis", "wavelets", "signal processing", "image processing", "graph theory", "combinatorics", "probability", "statistics", "stochastic processes"]
+  },
+  {
+    "CODIGO": "CS331",
+    "CURSO": "Redes y Comunicación",
+    "DESCRIPCION": ["computer networks", "communication protocols", "tcp ip", "osi model", "routing", "switching", "network architecture", "lan", "wan", "man", "wireless networks", "mobile networks", "network security", "quality service", "network management", "protocol analysis", "packet switching", "circuit switching", "internet", "applications"]
+  },
+  {
+    "CODIGO": "CS261",
+    "CURSO": "Computación Gráfica",
+    "DESCRIPCION": ["computer graphics", "rendering", "rasterization", "ray tracing", "shading", "lighting", "texturing", "animation", "modeling", "transformation", "projection", "clipping", "hidden surface", "color theory", "image processing", "computer vision", "graphics pipeline", "gpu programming", "visualization", "virtual reality"]
+  },
+  {
+    "CODIGO": "CS281",
+    "CURSO": "Inteligencia Artificial",
+    "DESCRIPCION": ["artificial intelligence", "machine learning", "neural networks", "deep learning", "natural language", "computer vision", "robotics", "expert systems", "knowledge representation", "reasoning", "planning", "search algorithms", "optimization", "reinforcement learning", "supervised learning", "unsupervised learning", "pattern recognition", "data mining", "cognitive computing"]
+  },
+  {
+    "CODIGO": "CS341",
+    "CURSO": "Lenguajes de Programación",
+    "DESCRIPCION": ["programming languages", "syntax", "semantics", "parsing", "compilation", "interpretation", "type systems", "memory management", "garbage collection", "functional programming", "object oriented", "procedural", "logic programming", "concurrent programming", "parallel programming", "domain specific", "language design", "implementation", "virtual machines", "runtime systems"]
+  },
+  {
+    "CODIGO": "CS391",
+    "CURSO": "Ingeniería de Software III",
+    "DESCRIPCION": ["advanced software engineering", "software project management", "risk management", "quality management", "configuration management", "requirements engineering", "software metrics", "process improvement", "capability maturity", "agile methodologies", "lean development", "test driven", "behavior driven", "model driven", "architecture patterns", "design patterns", "refactoring", "legacy systems", "maintenance", "evolution"]
+  },
+  {
+    "CODIGO": "ET101",
+    "CURSO": "Metodología de la Investigación en Computación",
+    "DESCRIPCION": ["research methodology", "scientific method", "literature review", "research design", "data collection", "data analysis", "experimentation", "hypothesis testing", "validity", "reliability", "ethics", "academic writing", "publication", "presentation", "peer review", "citation", "bibliography", "research proposals", "funding", "collaboration"]
+  },
+  {
+    "CODIGO": "FG350",
+    "CURSO": "Liderazgo",
+    "DESCRIPCION": ["leadership", "management", "team building", "motivation", "communication", "decision making", "problem solving", "conflict resolution", "strategic planning", "vision", "goals", "objectives", "delegation", "empowerment", "coaching", "mentoring", "feedback", "performance", "change management", "organizational behavior"]
+  },
+  {
+    "CODIGO": "CS201",
+    "CURSO": "Computación en la Sociedad",
+    "DESCRIPCION": ["computing society", "social impact", "ethical issues", "professional responsibility", "privacy", "security", "intellectual property", "digital divide", "accessibility", "sustainability", "globalization", "cultural impact", "economic impact", "legal aspects", "policy making", "regulation", "cyberethics", "digital citizenship", "social media", "information society"]
+  },
+  {
+    "CODIGO": "CS2H1",
+    "CURSO": "Interacción Humano Computador",
+    "DESCRIPCION": ["human computer interaction", "user interface", "user experience", "usability", "accessibility", "user centered design", "interaction design", "information architecture", "visual design", "prototyping", "evaluation", "testing", "cognitive psychology", "perception", "attention", "memory", "learning", "error prevention", "feedback", "affordances"]
+  },
+  {
+    "CODIGO": "CS342",
+    "CURSO": "Compiladores",
+    "DESCRIPCION": ["compilers", "parsing", "lexical analysis", "syntax analysis", "semantic analysis", "code generation", "optimization", "intermediate representation", "symbol tables", "type checking", "error handling", "runtime environment", "memory management", "garbage collection", "just time compilation", "interpretation", "language implementation", "tools", "frameworks", "algorithms"]
+  },
+  {
+    "CODIGO": "CS351",
+    "CURSO": "Seguridad en Computación",
+    "DESCRIPCION": ["computer security", "cybersecurity", "cryptography", "encryption", "authentication", "authorization", "access control", "network security", "web security", "mobile security", "malware", "vulnerabilities", "threats", "attacks", "defense", "incident response", "forensics", "privacy", "anonymity", "trust"]
+  },
+  {
+    "CODIGO": "CS3P1",
+    "CURSO": "Computación Paralela y Distribuida",
+    "DESCRIPCION": ["parallel computing", "distributed computing", "concurrency", "synchronization", "message passing", "shared memory", "multithreading", "multiprocessing", "cluster computing", "grid computing", "cloud computing", "mapreduce", "hadoop", "spark", "performance", "scalability", "fault tolerance", "load balancing", "scheduling", "algorithms"]
+  },
+  {
+    "CODIGO": "CS402",
+    "CURSO": "Proyecto Final de Carrera I",
+    "DESCRIPCION": ["final project", "research project", "software development", "requirements analysis", "design", "implementation", "testing", "documentation", "project management", "teamwork", "problem solving", "critical thinking", "innovation", "creativity", "technical writing", "presentation", "defense", "evaluation", "feedback", "improvement"]
+  },
+  {
+    "CODIGO": "FG205",
+    "CURSO": "Historia de la Cultura",
+    "DESCRIPCION": ["cultural history", "civilization", "societies", "traditions", "customs", "beliefs", "values", "art", "literature", "philosophy", "science", "technology", "religion", "politics", "economics", "social structures", "historical development", "cultural exchange", "global perspectives", "critical analysis"]
+  },
+  {
+    "CODIGO": "CB309",
+    "CURSO": "Computación Molecular Biológica",
+    "DESCRIPCION": ["computational biology", "bioinformatics", "genomics", "proteomics", "sequence analysis", "alignment", "phylogenetics", "structure prediction", "molecular modeling", "drug design", "systems biology", "network biology", "data mining", "machine learning", "statistical analysis", "algorithm development", "database management", "visualization", "simulation", "pattern recognition"]
+  },
+  {
+    "CODIGO": "CS361",
+    "CURSO": "Tópicos en Computación Gráfica",
+    "DESCRIPCION": ["advanced graphics", "real time rendering", "global illumination", "physically based", "animation systems", "character animation", "motion capture", "procedural generation", "geometric modeling", "surface representation", "volume rendering", "scientific visualization", "information visualization", "virtual reality", "augmented reality", "graphics hardware", "gpu computing", "shader programming", "optimization", "performance"]
+  },
+  {
+    "CODIGO": "CS381",
+    "CURSO": "Tópicos en Inteligencia Artificial",
+    "DESCRIPCION": ["advanced artificial intelligence", "deep learning", "reinforcement learning", "natural language processing", "computer vision", "robotics", "knowledge graphs", "reasoning systems", "planning algorithms", "multiagent systems", "swarm intelligence", "evolutionary computation", "fuzzy systems", "neural networks", "transfer learning", "unsupervised learning", "semi supervised", "explainable ai", "ethical ai", "applications"]
+  },
+  {
+    "CODIGO": "CS370",
+    "CURSO": "Big Data",
+    "DESCRIPCION": ["big data", "data analytics", "distributed systems", "mapreduce", "hadoop", "spark", "nosql", "data mining", "machine learning", "statistical analysis", "data visualization", "stream processing", "batch processing", "data warehousing", "data lakes", "etl", "data governance", "privacy", "security", "scalability"]
+  },
+  {
+    "CODIGO": "CS392",
+    "CURSO": "Tópicos Avanzados en Ingeniería de Software",
+    "DESCRIPCION": ["advanced software topics", "software architecture", "microservices", "serverless", "cloud native", "devops", "continuous delivery", "infrastructure code", "containerization", "orchestration", "monitoring", "observability", "performance engineering", "security engineering", "testing strategies", "quality assurance", "process improvement", "metrics", "analytics", "automation"]
+  },
+  {
+    "CODIGO": "CS403",
+    "CURSO": "Proyecto Final de Carrera II",
+    "DESCRIPCION": ["final project continuation", "implementation phase", "testing validation", "performance evaluation", "documentation completion", "user manual", "technical report", "presentation preparation", "demonstration", "peer review", "expert evaluation", "refinement", "optimization", "deployment", "maintenance planning", "future work", "lessons learned", "project reflection", "career preparation", "professional development"]
+  },
+  {
+    "CODIGO": "ET201",
+    "CURSO": "Formación de Empresas de Base Tecnológica I",
+    "DESCRIPCION": ["technology entrepreneurship", "business planning", "market analysis", "competitive analysis", "value proposition", "business model", "customer development", "product development", "team formation", "funding strategies", "intellectual property", "legal aspects", "financial planning", "marketing strategy", "sales strategy", "pitching", "networking", "mentorship", "resources", "ecosystem"]
+  },
+  {
+    "CODIGO": "FG221",
+    "CURSO": "Historia de la Ciencia y Tecnología",
+    "DESCRIPCION": ["history science", "history technology", "scientific revolution", "technological innovation", "inventions", "discoveries", "scientific method", "research development", "industrial revolution", "digital revolution", "information age", "societal impact", "cultural context", "economic factors", "political influences", "ethical considerations", "future trends", "global perspectives", "critical analysis", "interdisciplinary"]
+  },
+  {
+    "CODIGO": "FG301",
+    "CURSO": "Enseñanza Social de la Iglesia",
+    "DESCRIPCION": ["social teaching", "catholic social", "human dignity", "common good", "solidarity", "subsidiarity", "preferential option", "care creation", "family life", "work rights", "economic justice", "political participation", "global development", "peace building", "environmental stewardship", "cultural diversity", "religious freedom", "dialogue", "service", "community"]
+  },
+  {
+    "CODIGO": "CS362",
+    "CURSO": "Robótica",
+    "DESCRIPCION": ["robotics", "robot design", "kinematics", "dynamics", "control systems", "sensors", "actuators", "perception", "localization", "mapping", "path planning", "motion planning", "manipulation", "navigation", "human robot", "swarm robotics", "autonomous systems", "artificial intelligence", "machine learning", "computer vision"]
+  },
+  {
+    "CODIGO": "CS393",
+    "CURSO": "Sistemas de Información",
+    "DESCRIPCION": ["information systems", "business processes", "enterprise architecture", "system analysis", "system design", "implementation", "integration", "management", "governance", "security", "compliance", "audit", "risk management", "data management", "business intelligence", "decision support", "knowledge management", "collaboration", "communication", "productivity"]
+  },
+  {
+    "CODIGO": "CS3P2",
+    "CURSO": "Cloud Computing",
+    "DESCRIPCION": ["cloud computing", "infrastructure service", "platform service", "software service", "virtualization", "containerization", "orchestration", "microservices", "serverless", "storage", "networking", "security", "monitoring", "management", "cost optimization", "performance", "scalability", "reliability", "disaster recovery", "migration"]
+  },
+  {
+    "CODIGO": "CS404",
+    "CURSO": "Proyecto Final de Carrera III",
+    "DESCRIPCION": ["final project completion", "system deployment", "user acceptance", "performance optimization", "documentation finalization", "project presentation", "thesis defense", "evaluation committee", "professional feedback", "career transition", "portfolio development", "job preparation", "industry connections", "alumni network", "continuing education", "research publication", "conference presentation", "intellectual property", "technology transfer", "entrepreneurship"]
+  },
+  {
+    "CODIGO": "ET301",
+    "CURSO": "Formación de Empresas de Base Tecnológica II",
+    "DESCRIPCION": ["advanced entrepreneurship", "business growth", "scaling strategies", "team development", "leadership challenges", "financial management", "fundraising advanced", "venture capital", "angel investing", "strategic partnerships", "customer acquisition", "market expansion", "product iteration", "innovation management", "intellectual property", "legal compliance", "exit strategies", "succession planning", "corporate culture", "social impact"]
+  },
+  {
+    "CODIGO": "FG211",
+    "CURSO": "Ética Profesional",
+    "DESCRIPCION": ["professional ethics", "moral reasoning", "decision making", "responsibility", "accountability", "integrity", "honesty", "fairness", "justice", "respect", "confidentiality", "conflict interest", "whistleblowing", "compliance", "regulation", "codes conduct", "professional standards", "social responsibility", "sustainability", "stakeholders"]
+  },
+  {
+    "CODIGO": "FG220",
+    "CURSO": "Análisis de la Realidad Peruana",
+    "DESCRIPCION": ["peruvian reality", "social analysis", "economic analysis", "political analysis", "cultural analysis", "historical context", "current issues", "development challenges", "inequality", "poverty", "education", "healthcare", "infrastructure", "environment", "natural resources", "democracy", "governance", "citizenship", "participation", "solutions"]
+  },
+  {
+    "CODIGO": "ID101",
+    "CURSO": "Inglés Técnico Profesional",
+    "DESCRIPCION": ["technical english", "professional english", "communication skills", "vocabulary building", "grammar", "pronunciation", "listening comprehension", "reading comprehension", "writing skills", "speaking skills", "presentation skills", "negotiation", "meetings", "emails", "reports", "documentation", "technical writing", "cross cultural", "business communication", "career development"]
+  }
+]
